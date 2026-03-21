@@ -488,7 +488,7 @@ function addCategory(){
 }
 function deleteCategory(i){
   const name=CATEGORIES[i].name;
-  if(!confirm('Remove category "'+name+'"? Entries using it will keep the value but it won't appear in filters.')) return;
+  if(!confirm('Remove category: '+name)) return;
   CATEGORIES.splice(i,1);
   saveLabels();rebuildUI();renderSettingsTags();render();
 }
